@@ -1,0 +1,398 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.form-button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  width: 100px;
+  margin: 30px auto;
+}
+
+.form .form-labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form .form-labels label {
+  width: 30%;
+  margin-top: 20px;
+}
+
+.form .form-labels label input {
+  width: 50%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.form .form-item + .form-item {
+  margin-top: 20px;
+}
+
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+input[type=text]:focus {
+  outline: none;
+}
+
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.game-component {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 20px auto 0;
+}
+
+.game-component .game_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+}
+
+.game-component .game_block-item {
+  width: 50%;
+  height: 50%;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  opacity: .5;
+}
+
+.game-component .game_block-item.active {
+  opacity: 1;
+  border: 3px solid chocolate;
+}
+
+.game-component .game_block .blue_block {
+  background-color: blue;
+}
+
+.game-component .game_block .blue_block:hover, .game-component .game_block .blue_block:focus, .game-component .game_block .blue_block.active {
+  -webkit-transform: translateX(-5px) translateY(-5px);
+          transform: translateX(-5px) translateY(-5px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.game-component .game_block .red_block {
+  background-color: red;
+}
+
+.game-component .game_block .red_block:hover, .game-component .game_block .red_block:focus, .game-component .game_block .red_block.active {
+  -webkit-transform: translateX(5px) translateY(-5px);
+          transform: translateX(5px) translateY(-5px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.game-component .game_block .yellow_block {
+  background-color: yellow;
+}
+
+.game-component .game_block .yellow_block:hover, .game-component .game_block .yellow_block:focus, .game-component .game_block .yellow_block.active {
+  -webkit-transform: translateX(-5px) translateY(5px);
+          transform: translateX(-5px) translateY(5px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.game-component .game_block .green_block {
+  background-color: green;
+}
+
+.game-component .game_block .green_block:hover, .game-component .game_block .green_block:focus, .game-component .game_block .green_block.active {
+  -webkit-transform: translateX(5px) translateY(5px);
+          transform: translateX(5px) translateY(5px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.game-component .game_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.game-component .game_info-round {
+  margin-bottom: 20px;
+}
+
+.game-component .game_info-round h2 {
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.game-component .game_info-difficulties {
+  margin-bottom: 20px;
+}
+
+.game-component .game_info-difficulties label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-component .game_info-difficulties label span {
+  margin-left: 10px;
+}
+
+.game-component .game_info-difficulties label + label {
+  margin-top: 5px;
+}
+
+.game-component .game_info-button .button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+}
+
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .nav .nav-link {
+  position: relative;
+  padding: 20px 0;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+header .nav .nav-link::after {
+  content: '';
+  opacity: 0;
+}
+
+header .nav .nav-link + .nav-link {
+  margin-left: 10px;
+}
+
+header .nav .nav-link.active::after, header .nav .nav-link:hover::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: chocolate;
+  opacity: 1;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+header .nav .nav-link.active {
+  color: chocolate;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+
+footer .content {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+}
+
+footer .content .author-git a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+footer .content .author-git a:hover {
+  color: chocolate;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+@media screen and (max-width: 1000px) {
+  .form .form-labels label {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .form .form-labels label {
+    width: 80%;
+  }
+  .game-component {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .game-component .game_block {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

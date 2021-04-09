@@ -1,0 +1,46 @@
+header {
+    background-color: #000;
+    color: #fff;
+    
+    .nav {
+        display: flex;
+        
+        .nav-link {
+            position: relative;
+            padding: 20px 0;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition:  1s ease;
+
+            &::after {
+                content: '';
+                opacity: 0;
+            }
+
+            & + .nav-link {
+                margin-left: 10px;
+            }
+
+            &.active,
+            &:hover {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 3px;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: chocolate;
+                    opacity: 1;
+                    transition:  1s ease;
+                }
+            }
+
+            &.active {
+                color: chocolate;
+            }
+        } 
+    }
+}

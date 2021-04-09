@@ -1,0 +1,110 @@
+.game-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px auto 0;
+    
+    .game_block {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 400px;
+        height: 400px;
+
+        &-item {
+            width: 50%;
+            height: 50%;
+            transition: .3s ease-in-out;
+            opacity: .5;
+        }
+
+        &-item.active {
+            opacity: 1;
+            border: 3px solid chocolate;
+        }
+
+        .blue_block {
+            background-color: blue;
+            
+            &:hover,
+            &:focus,
+            &.active {
+                transform: translateX(-5px) translateY(-5px);
+                transition: .3s ease-in-out;
+            }
+        }
+        .red_block {
+            background-color: red;
+            
+            &:hover,
+            &:focus,
+            &.active {
+                transform: translateX(5px) translateY(-5px);
+                transition: .3s ease-in-out;
+            }
+        }
+        .yellow_block {
+            background-color: yellow;
+            
+            &:hover,
+            &:focus,
+            &.active {
+                transform: translateX(-5px) translateY(5px);
+                transition: .3s ease-in-out;
+            }
+        }
+        .green_block {
+            background-color: green;
+            
+            &:hover,
+            &:focus,
+            &.active {
+                transform: translateX(5px) translateY(5px);
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+
+    .game_info {
+        display: flex;
+        flex-direction: column;
+
+        &-round {
+            margin-bottom: 20px;
+            h2 {
+                font-weight: 800;
+                font-size: 22px;
+            }
+        }
+
+        &-difficulties {
+            margin-bottom: 20px;
+
+            label {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                span {
+                    margin-left: 10px;
+                }
+
+                & + label {
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        &-button {
+            .button {
+                background-color: #000;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 12px;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+}

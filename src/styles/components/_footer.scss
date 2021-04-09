@@ -1,0 +1,26 @@
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+
+    .content {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+
+        .author-git {
+            a {
+                color: #fff;
+                text-decoration: none;
+                transition: .3s ease;
+
+                &:hover {
+                    color: chocolate;
+                    transition: .3s ease;
+                }
+            }
+        }
+    }
+}
